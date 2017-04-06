@@ -1,10 +1,9 @@
 <?php
+
     require("unicorns.php");
 
     $unicornHelper = new UnicornHelper();
-
 ?>
-
 <!DOCTYPE html>
 <html>
   <head>

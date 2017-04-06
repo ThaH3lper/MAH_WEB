@@ -36,6 +36,7 @@ class UnicornHelper
 
     public static function generateUnicornOneline($id, $name, $details)
     {
+      //In future, put this in seperate html file
         return "<div class='row'>
           <div class='container customListItem'>
             <div class='col-sm-2'>
@@ -56,6 +57,7 @@ class UnicornHelper
 
     public static function generateUnicornDetails($name, $description, $raporter, $time, $img)
     {
+      //In future, put this in seperate html file
         $date = explode(" ", $time);
         return "<h2> $name </h2>
         <p><strong>Date reported: $date[0]</strong></p>
