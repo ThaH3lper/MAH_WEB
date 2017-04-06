@@ -1,0 +1,13 @@
+.sitewidth{
+  width: 900px;
+  margin: auto;
+}
+
+.customListItem{
+  margin-top: 10px;
+}
+
+img{
+    width:100%;
+    max-width:500px;
+}

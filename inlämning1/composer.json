@@ -1,0 +1,18 @@
+{
+    "name": "mah/ae3210",
+    "description": "Inlämings uppgift 1",
+    "type": "l",
+    "require": {
+        "mashape/unirest-php": "^3.0",
+        "monolog/monolog": "^1.22",
+        "twbs/bootstrap": "^3.3"
+    },
+    "license": "none",
+    "authors": [
+        {
+            "name": "Patrik Nilsson",
+            "email": "patriknilsson1337@live.se"
+        }
+    ],
+    "minimum-stability": "stable"
+}
