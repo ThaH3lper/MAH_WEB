@@ -26,27 +26,7 @@
         <input type="button" onclick="location.href='index.php';" class="btn btn-primary" value="Go to list" />
 
         <?php
-        $foundUnicorn = false;
-
-        if(isset($_GET['id'])) {
-            $id = $_GET["id"];
-            $response = $unicornHelper->getUnicorn($id);
-            if($response->code == 200 && $id != "") {
-              $foundUnicorn = true;
-              $unicorn = $response->body;
-              echo UnicornHelper::generateUnicornDetails($unicorn->name,
-                $unicorn->description, $unicorn->reportedBy,
-                $unicorn->spottedWhen->date, $unicorn->image);
-          }
-        }
-        if($foundUnicorn == false) {
-          if(isset($_GET['id'])) {
-            echo "<p class='bg-danger'>Could not found unicorn with id: $id </p>";
-          }
-          foreach ($unicornHelper->getUnicorns() as $unicorn) {
-            echo UnicornHelper::generateUnicornOneline($unicorn->id, $unicorn->name, $unicorn->details);
-          }
-        }
+          $unicornHelper->showUnicornData();
         ?>
       <form>
     </div>

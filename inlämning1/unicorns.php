@@ -14,7 +14,34 @@ class UnicornHelper
       $this->log = new Logger('unicorn');
       $this->log->pushHandler(new StreamHandler('visited.log', Logger::INFO));
     }
-    public function getUnicorns()
+
+    public function showUnicornData()
+    {
+      $foundUnicorn = false;
+      $id = $_GET["id"];
+
+      if(isset($id)) {
+          $response = $this->getUnicorn($id);
+          if($response->code == 200 && $id != "") {
+            $foundUnicorn = true;
+            $unicorn = $response->body;
+
+            echo $this->generateUnicornDetails($unicorn->name,
+              $unicorn->description, $unicorn->reportedBy,
+              $unicorn->spottedWhen->date, $unicorn->image);
+        }
+      }
+      if($foundUnicorn == false) {
+        if(isset($id)) {
+          echo "<p class='bg-danger'>Could not found unicorn with id: $id </p>";
+        }
+        foreach ($this->getUnicorns() as $unicorn) {
+          echo $this->generateUnicornOneline($unicorn->id, $unicorn->name, $unicorn->details);
+        }
+      }
+    }
+
+    private function getUnicorns()
     {
       $headers = array('Accept' => 'application/json');
       $response = Unirest\Request::get('http://unicorns.idioti.se/', $headers);
@@ -22,7 +49,7 @@ class UnicornHelper
       return $response->body;
     }
 
-    public function getUnicorn($id)
+    private function getUnicorn($id)
     {
       $headers = array('Accept' => 'application/json');
       $response = Unirest\Request::get("http://unicorns.idioti.se/$id", $headers);
@@ -34,7 +61,7 @@ class UnicornHelper
       return $response;
     }
 
-    public static function generateUnicornOneline($id, $name, $details)
+    private static function generateUnicornOneline($id, $name, $details)
     {
       //In future, put this in seperate html file
         return "<div class='row'>
@@ -55,7 +82,7 @@ class UnicornHelper
         </div>";
     }
 
-    public static function generateUnicornDetails($name, $description, $raporter, $time, $img)
+    private static function generateUnicornDetails($name, $description, $raporter, $time, $img)
     {
       //In future, put this in seperate html file
         $date = explode(" ", $time);
