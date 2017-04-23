@@ -13,19 +13,20 @@ class StoresTableSeeder extends Seeder
     {
         DB::table('stores')->insert([
             [
-                'id' => 1,
-                'name' => "OnOff",
-                'city' => "Malmö",
+                "name" => "Elgiganten",
+                "city" => "Lund"
             ],
             [
-                'id' => 2,
-                'name' => "Siba",
-                'city' => "Malmö",
+                "name" => "Media Markt",
+                "city" => "Malmö"
             ],
             [
-                'id' => 3,
-                'name' => "FixIt",
-                'city' => "Piteå",
+                "name" => "Expert",
+                "city" => "Staffanstorp"
+            ],
+            [
+                "name" => "Siba",
+                "city" => "Helsingborg"
             ]
         ]);
     }

@@ -11,7 +11,12 @@
 |
 */
 
-$app->get('/products', 'ProductsController@index');
+$app->get('/products', 'ProductsController@products');
 
+$app->post('/products', 'ProductsController@create');
 
-$app->get('/products/{id}', 'ProductsController@show');
+$app->get('/products/{id}', 'ProductsController@product');
+
+$app->get('/stores', 'ProductsController@stores');
+
+$app->get('/reviews', 'ProductsController@reviews');
