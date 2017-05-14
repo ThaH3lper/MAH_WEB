@@ -1,0 +1,210 @@
+body {
+  font: 20px Montserrat, sans-serif;
+  line-height: 1.8;
+  color: #f5f6f7;
+}
+
+hr{
+    border-top-color: black;
+}
+
+.blocker{
+    height: 80px;
+}
+
+#welcome{
+    background: #337ab7;
+    background: -webkit-linear-gradient(to bottom right, #337ab7, #00213e);
+    background: -o-linear-gradient(to bottom right, #337ab7, #00213e);
+    background: -moz-linear-gradient(to bottom right, #337ab7, #00213e);
+    background: linear-gradient(to bottom right, #337ab7, #00213e);
+    text-align: center;
+    margin: 0px;
+    padding: 40px 0px 40px 0px;
+    
+    border-width: 0px;
+    border-bottom-width: 2px;
+    border-color: rgba(0, 0, 0, 0.5);
+    border-style: solid;
+}
+
+#welcome h2{
+    font-size: 50px;
+    margin-bottom: 0px;
+}
+#welcome h3{
+    margin: 10px;
+    font-size: 35px;
+}
+
+#intro{
+    background: #3A3C41;
+    font-size: 15px;
+    padding: 30px 0px 30px 0px;
+    text-align: center;
+}
+
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-weight: bolder;
+}
+
+.navbar-nav li a:hover {
+    color: #985e5d !important;
+}
+
+.projects{
+    background: #0a0a0a;
+    text-align: center;
+    margin: 0px;
+    padding-bottom: 10px;
+    
+    border-width: 0px;
+    border-bottom-width: 2px;
+    border-top-width: 5px;
+    border-color: rgba(0, 0, 0, 0.5);
+    border-style: solid;
+}
+.projects h2{
+    margin: 15px 0px 0px 0px;
+    color: #ffffff;
+    text-shadow: 0px 4px 3px rgb(47, 104, 189);
+}
+
+.project-box{
+    display: block;
+    position: relative;
+    clear: both;
+    background-color: white;
+    width: 260px;
+    color: black;
+    margin: 20px auto;
+    box-shadow: 5px 5px 10px #000000;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    font-size: 14px;
+    color: black;
+    
+    -webkit-transition : border 500ms ease-out, box-shadow 500ms ease-out;
+    -moz-transition : border 500ms ease-out, box-shadow 500ms ease-out;
+    -o-transition : border 500ms ease-out, box-shadow 500ms ease-out;
+    transition : border 500ms ease-out, box-shadow 500ms ease-out;
+    
+}
+
+.project-box img{
+    border-bottom-width: 1px;
+    border-style: solid;
+    border-color: black;
+    width: 256px;
+    height: 256px;
+}
+
+.project-box .tags{
+    font-size: 18px;
+    position: absolute;
+    float: left;
+    top: 0px;
+    height: 236px;
+    margin: 10px;
+}
+
+.project-box .tagsBox{
+    position: absolute;
+    float: left;
+    bottom: 0px;
+    text-align: left;
+}
+
+.project-box:hover {
+    border-color: #ffa700;
+    box-shadow: 5px 5px 10px #ffa700;
+    color: black;
+    text-decoration: none;
+    
+    -webkit-transition : border 500ms ease-out, box-shadow 500ms ease-out;
+    -moz-transition : border 500ms ease-out, box-shadow 500ms ease-out;
+    -o-transition : border 500ms ease-out, box-shadow 500ms ease-out;
+    transition : border 500ms ease-out, box-shadow 500ms ease-out;
+}
+
+/* PROJECT CONTENT */
+
+.carousel-inner > .item > img {
+    margin: 0 auto;
+}
+
+.projectContent{
+    background-color: #0a0a0a;
+}
+
+.about{
+    padding: 50px 0px 50px 0px;
+    background-color: #0a0a0a;
+    font-size: 18px;
+}
+
+#banner{
+    background: #000 url('Images/banner.jpg') no-repeat center center;
+    width:100%;
+    height:250px;
+}
+
+.textImg{
+    margin: auto;  
+}
+.midImg{
+    margin: 10px auto 10px auto;
+}
+
+.projectContent .text{
+    background-color: #e7e7e7;
+    color: black;
+    font-size: 16px;
+    
+    border-width: 0px;
+    border-bottom-width: 2px;
+    border-top-width: 2px;
+    border-color: rgba(0, 0, 0, 0.3);
+    border-style: solid;
+    
+    padding: 10px 0px 10px 0px;
+}
+
+.youtube {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	height: 0;
+}
+.youtube iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+/* end */
+
+footer{
+    font-size: 12px;
+    background-color: #292A2F;
+    border-width: 0px;
+    border-top-width: 5px;
+    border-color: #3A3C41;
+    border-style: solid;
+    padding: 10px 0px;
+}
+
+footer p{
+    margin: 0px;
+}
