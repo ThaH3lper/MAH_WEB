@@ -1,0 +1,23 @@
+body {
+  font: 20px Montserrat, sans-serif;
+  line-height: 1.8;
+  color: #f5f6f7;
+}
+
+.icon{
+    width:100%;
+    max-width:64px;
+}
+
+.navbar .nav.pull-right {
+     float: right;
+    margin-right: 10px;
+  }
+
+.pad {
+    margin-left: 10px;
+  }
+
+.navform{
+  margin-bottom: 0px;
+}
